@@ -1,4 +1,6 @@
-﻿namespace Singleton;
+﻿using System;
+
+namespace Singleton;
 
 class Program
 {
