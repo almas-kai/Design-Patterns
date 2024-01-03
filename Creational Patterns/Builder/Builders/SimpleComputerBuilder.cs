@@ -6,7 +6,6 @@ public class SimpleComputerBuilder : IBuilder
     public IBuilder SetCPU()
     {
         CPU simpleCPU = new CPU();
-        simpleCPU.Name = "Simple CPU";
         simpleCPU.Characteristics.Add("Core Number", "4 Cores");
         simpleCPU.Characteristics.Add("Architecture", "x86");
 
@@ -18,7 +17,6 @@ public class SimpleComputerBuilder : IBuilder
     public IBuilder SetGraphicsCard()
     {
         GraphicsCard graphicsCard = new GraphicsCard();
-        graphicsCard.Name = "Simple Graphics Card";
         graphicsCard.Characteristics.Add("VRAM", "2GB");
 
         _product.AddComponent(graphicsCard);
@@ -29,7 +27,6 @@ public class SimpleComputerBuilder : IBuilder
     public IBuilder SetMemory()
     {
         Memory memory = new Memory();
-        memory.Name = "Simple Memory";
         memory.Characteristics.Add("Size", "4GB");
 
         _product.AddComponent(memory);
@@ -40,7 +37,6 @@ public class SimpleComputerBuilder : IBuilder
     public IBuilder SetStorage()
     {
         Storage storage = new Storage();
-        storage.Name = "Simple Storage";
         storage.Characteristics.Add("Size", "512GB");
         storage.Characteristics.Add("Type", "HDD");
         storage.Characteristics.Add("Speed", "7200RPM");
