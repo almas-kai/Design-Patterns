@@ -2,8 +2,11 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello, World!");
+        CharacterAbstract character = new Archer(new Bow());
+        character.Attack();
+        character = new Swordsman(new Sword());
+        character.Attack();
     }
 }
