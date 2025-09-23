@@ -6,7 +6,7 @@ namespace Singleton;
 ///  The thread-safe singleton implementation.
 ///</summary>
 public sealed class ThreadSafeSingleton{
-    private static ThreadSafeSingleton _onlyInstance;
+    private static volatile ThreadSafeSingleton _onlyInstance;
     private static readonly object _lock = new Object();
     private ThreadSafeSingleton(){}
 
