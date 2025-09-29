@@ -1,6 +1,6 @@
 # Factory Method Pattern
 
-This pattern works with abstractions.
+>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses
 
 This pattern lets you create different kinds of objects through the abstract base class. Subclasses decide what kind of objects are going to be created.
 
