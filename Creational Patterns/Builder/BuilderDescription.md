@@ -1,15 +1,22 @@
 # Builder Pattern
 
-The goal of this pattern is to separate the construction of an object from its representation. This pattern eases the construction process of different configurations of a complex object.
+The goal of this pattern is to separate the construction of an object from its representation.
 
-The construction process doesn't care how each part is assembled.
+The pattern is useful in these cases (it is assumed that the construction process is complex):
 
-This complex object is our **product**. We must define a **general interface** that all **concrete builders** have in common. Then we can use the **director** that defines steps to execute (implementation is defined by concrete builders) to get the product. So, we can use the **director** to save, and reuse specific configurations.
+1. When you have a type that has a lot of constructors (overloading) that instantiate objects with different configurations.
+2. When you want to reuse the creation process to produce different types of products.
 
-As an example consider a computer, it has different parts: HDD or maybe SSD, HD screen or FullHD screen, CPU that has 4 cores or 8 cores, and so on. So, you can construct this product using different configurations.
+## Players
 
-## Usage Case
+* Products - different types that you want to produce. They don't have to have the commonality between them, other than the construction process of course.
+* Builders - a hierarchy of different builders. A base class (interface) must define a contract for steps to be implemented by concrete builders. Concrete builders must have a method to return the product they constructed. The products can be completely unrelated, thus the base builder class cannot define the return result method.
+* Directors - each director defines a strict construction order, meaning construction steps are statically specified. The director is optional (a client can act as one). A director accepts a builder. And upon this builder it acts.
+* Client - initializes a concrete builder, passes it to a director (if you have one), and gets the product from the builder.
 
-Use this pattern when you need to implement different versions of a product.
+## C\#
 
-If your class has a lot of constructors that initialize an object with different configurations, consider using this pattern. But, at the same time if your class is simple you shouldn't complicate your code implementing this pattern.
+Nuances:
+
+* In C# enable fluent chaining via returning `this` in builders.
+* Use records for immutability.
