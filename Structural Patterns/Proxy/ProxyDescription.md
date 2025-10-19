@@ -25,3 +25,7 @@ Typical types of proxies:
 ## Additional considerations
 
 It is not necessary, but it is a good thing to define an interface, so both a proxy and an original class have the same members, thus the proxy can disguise itself as an original object. You also could use inheritance.
+
+Proxies should be lightweight and transparent. Delegate heavy work to the underlying object.
+
+In JS consider using built-in type [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy).
