@@ -2,6 +2,8 @@
 
 This pattern lets you encapsulate a request into an object. Thus, manipulating requests becomes easier (e.g. passing it as arguments, queuing and so on).
 
+>Four terms always associated with the command pattern are command, receiver, invoker and client. A command object knows about receiver and invokes a method of the receiver. Values for parameters of the receiver method are stored in the command. The receiver object to execute these methods is also stored in the command object by aggregation. The receiver then does the work when the execute() method in command is called. An invoker object knows how to execute a command, and optionally does bookkeeping about the command execution. The invoker does not know anything about a concrete command, it knows only about the command interface. Invoker object(s), command objects and receiver objects are held by a client object. The client decides which receiver objects it assigns to the command objects, and which commands it assigns to the invoker. The client decides which commands to execute at which points. To execute a command, it passes the command object to the invoker object. -Wikipedia
+
 ## Implementation Details
 
 1. Define an interface or base abstract class for the command subclasses. And declare a single method called 'execute' (optional methods like `Undo` can be included if needed). You can also declare additional fields so that the command can encapsulate request's additional data.
