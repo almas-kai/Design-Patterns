@@ -2,6 +2,8 @@
 
 Declares a class (**Mediator**) that manages other components. The components cannot communicate with each other, but with the **Mediator** class.
 
+This of an analogy: planes don't talk to each other, each plane talks to a dispatcher instead. And the dispatcher has to make sure that planes don't crash into each other.
+
 ## Implementation Details
 
 1. Define an interface for the **Mediator** class. This is important because components will be able to work with different **Mediator** classes in other projects, for example.
