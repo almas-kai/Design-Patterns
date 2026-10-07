@@ -19,6 +19,6 @@ Think carefully whether to use shallow or deep copying. For deep copying you cou
 
 C# has `ICloneable` but it doesn't specify whether the cloning must be deep or not. For that reason define your own interface.
 
-MemberwiseClone might be enough sometimes:
+`MemberwiseClone` might be enough sometimes:
 
 >The [MemberwiseClone](https://learn.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone?view=net-9.0) method creates a shallow copy by creating a new object, and then copying the nonstatic fields of the current object to the new object. If a field is a value type, a bit-by-bit copy of the field is performed. If a field is a reference type, the reference is copied but the referred object is not; therefore, the original object and its clone refer to the same object.
