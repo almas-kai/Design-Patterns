@@ -1,5 +1,6 @@
 static class Factory
 {
+    // Better use different methods (e.g. GetPhoneProduct, GetComputerProduct and so on).
     public static IProduct GetProduct(string productType)
     {
         switch (productType)
